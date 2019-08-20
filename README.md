@@ -1,4 +1,9 @@
- app.Use(async (context, next) =>
+Distributed .NET Core – Service discovery & Load balancing with Consul + Fabio
+
+ a service registry, which enables the service discovery capabilities for the microservices and eventually, we add Fabio on top of the stack, which provides an additional load balancer and a dynamic routing table.
+ 
+ 
+app.Use(async (context, next) =>
             {
                 var consulClient = new ConsulClient();
                 var httpCheck = new AgentServiceCheck()
